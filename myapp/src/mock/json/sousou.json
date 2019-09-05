@@ -1,0 +1,88 @@
+{
+    "sousou":[
+        {
+            "href":"movie",
+            "tit":"电影",
+            "text":"影院热映",
+            "color":"color: rgb(35, 132, 232);"
+
+        },
+        {
+            "href":"#",
+            "tit":"电视",
+            "text":"正在热播",
+            "color":"color:rgb(122, 106, 219);"
+
+        },
+        {
+            "href":"book",
+            "tit":"图书",
+            "text":"畅销排行",
+            "color":"color:rgb(159, 120, 96);"
+
+        },
+        {
+            "href":"#",
+            "tit":"同城",
+            "text":"周末活动",
+            "color":"color:rgb(230, 70, 126);"
+
+        },
+        {
+            "href":"#",
+            "tit":"小组",
+            "text":"志趣相投",
+            "color":"color:rgb(42, 184, 204);"
+
+        },
+        {
+            "href":"#",
+            "tit":"音乐",
+            "text":"新碟榜",
+            "color":"color:rgb(244, 143, 46);"
+
+        },
+        {
+            "href":"#",
+            "tit":"阅读",
+            "text":"电子书",
+            "color":"color:rgb(159, 120, 96);"
+
+        },
+        {
+            "href":"#",
+            "tit":"游戏",
+            "text":"虚拟世界",
+            "color":"color:rgb(87, 116, 197);"
+
+        },
+        {
+            "href":"#",
+            "tit":"应用",
+            "text":"玩手机",
+            "color":"color:rgb(89, 108, 221);"
+
+        },
+        {
+            "href":"#",
+            "tit":"东西",
+            "text":"心爱之物",
+            "color":"color:rgb(225, 100, 77);"
+
+        },
+        {
+            "href":"#",
+            "tit":"FM",
+            "text":"红心歌单",
+            "color":"color:rgb(64, 207, 169);"
+
+        },
+        {
+            "href":"#",
+            "tit":"市集",
+            "text":"购买原创",
+            "color":"color:rgb(66, 189, 86);"
+
+        }
+    ]
+}
