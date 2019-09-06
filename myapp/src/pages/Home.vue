@@ -33,7 +33,7 @@ export default {
     components:{
         headone,
         hoin
-        }
+    }
 }
 </script>
 <style scoped>

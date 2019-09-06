@@ -41,6 +41,8 @@ export default {
         padding-left: 0.18rem;
         padding-right: 0.18rem;
         background: #fff;
+        position: fixed;
+        z-index: 9999;
         /* background: palegreen; */
         border-bottom: .01rem solid #f3f3f3;
         /* display: flex; */

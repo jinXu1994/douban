@@ -1,31 +1,38 @@
 <template>
-    <div class="homeIn">
-        <div class="homeIn-con" v-for="(v,i) in arr" :key="i">
-        <!-- <div class="homeIn-con"> -->
-            <div class="homeL">
-                <h1>{{v.title}}</h1>
-                <!-- <h1>第三个人骗你是法 </h1> -->
+    <div>
+        <div class="wite"  style="text-align: center;" v-if="arr.length<=0">
+            <img  src="../../static/img/loading_green.gif" >
+        </div>
+        
+        <div class="homeIn">
+            <div class="homeIn-con" v-for="(v,i) in arr" :key="i">
+            <!-- <div class="homeIn-con"> -->
+                <div class="homeL">
+                    <h1>{{v.title}}</h1>
+                    <!-- <h1>第三个人骗你是法 </h1> -->
 
-                <p>{{v.tags}}</p>
-                <!-- <p>上到楼时间管理，发过来毛驴詹妮弗反斗联盟分隔擦个人地方 </p> -->
+                    <p>{{v.tags}}</p>
+                    <!-- <p>上到楼时间管理，发过来毛驴詹妮弗反斗联盟分隔擦个人地方 </p> -->
 
-            </div>
-            <!-- <div class="homeR"> -->
-                <img :src="v.image"/>
-                <!-- <img src="../../static/img/01.jpg"/> -->
+                </div>
+                <!-- <div class="homeR"> -->
+                    <img :src="v.image"/>
+                    <!-- <img src="../../static/img/01.jpg"/> -->
 
-                
-            <!-- </div> -->
-            <div class="homeB">
-                <span class="spZ">{{v.category_name}}</span>
-                <!-- <span class="spZ">电泳</span> -->
+                    
+                <!-- </div> -->
+                <div class="homeB">
+                    <span class="spZ">{{v.category_name}}</span>
+                    <!-- <span class="spZ">电泳</span> -->
 
-                <span class="spY">{{v.subcategory_name}}</span>
-                <!-- <span class="spY">多个现场看到对方大人</span> -->
+                    <span class="spY">{{v.subcategory_name}}</span>
+                    <!-- <span class="spY">多个现场看到对方大人</span> -->
 
+                </div>
             </div>
         </div>
     </div>
+    
     
 </template>
 <script>
@@ -36,7 +43,7 @@ export default {
         };
     },
     created() {
-        // setTimeout(()=>{
+        setTimeout(()=>{
             this.axios({
                         methods:'get',
                         url:'/hoin'
@@ -44,12 +51,20 @@ export default {
                         console.log(data.data.shouye);
                         this.arr=data.data.shouye;
                     })
-        // },3000)
+        },3000)
          
     }
 }
 </script>
 <style scoped>
+    .wite{
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+    }
+
     .homeIn-con{
         width: 100%;
         overflow: hidden;
