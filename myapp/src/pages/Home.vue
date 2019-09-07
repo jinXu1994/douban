@@ -38,6 +38,7 @@ export default {
 </script>
 <style scoped>
     .home-body{
+        margin-top: .58rem;
         padding: .25rem .25rem 0;        
         /* height: 2rem; */
         overflow: hidden;

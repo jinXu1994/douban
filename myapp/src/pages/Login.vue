@@ -43,27 +43,27 @@ export default {
             funCL(){
                 this.$router.go(-1)
             },
+            login(){
+                // var param=new URLSearchParams();
+                // param.append("useremil",this.useremil);
+                // param.append("userpass",this.userpass);
+                // this.axios({
+                //     url:"http://localhost:3000/login",
+                //     method:"post",
+                //     data:param                 
+                // }).then((ok)=>{
+                //     console.log(ok)
+                //     console.log(ok.data.linkid)
+                //     if(ok.data.linkid==2){
+                //         alert("登录成功");
+                        this.$router.push("/home");
+                //     }else{
+                //         alert("登录失败请稍后再试");
+                //     }
+                // })
+            },
             fun1(){
                 this.bool=!this.bool
-            },
-            login(){
-                var param=new URLSearchParams();
-                param.append("useremil",this.useremil);
-                param.append("userpass",this.userpass);
-                this.axios({
-                    url:"http://localhost:3000/login",
-                    method:"post",
-                    data:param                 
-                }).then((ok)=>{
-                    console.log(ok)
-                    console.log(ok.data.linkid)
-                    if(ok.data.linkid==2){
-                        alert("登录成功");
-                        this.$router.push("/home");
-                    }else{
-                        alert("登录失败请稍后再试");
-                    }
-                })
             }
         }
 }

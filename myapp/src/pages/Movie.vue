@@ -4,44 +4,14 @@
             <headone></headone>
         </div>
         <div class="movB">
-            <div class="movInt">
-                <div class="intHe">
-                    <span>影院热映</span>
-                    <a href="#" style="color:#42bd56">更多</a>
-                </div>
-                <div class="intBo">
-                    <ul></ul>
-                </div>
+            <div>
+                <sliderzong :sfuprops="arr" txtM="影院热映"></sliderzong>
+                <sliderzong :sfuprops="arr" txtM="免费在线观影"></sliderzong>
+                <sliderzong :sfuprops="arr" txtM="新片速递"></sliderzong>
             </div>
-            <div class="movInt">
-                <div class="intHe">
-                    <span>免费电影在线观影</span>
-                    <a href="#" style="color:#42bd56">更多</a>
-                </div>
-                <div class="intBo">
-                    <ul></ul>
-                </div>
-            </div>
-            <div class="movInt">
-                <div class="intHe">
-                    <span>新片速递</span>
-                    <a href="#" style="color:#42bd56">更多</a>
-                </div>
-                <div class="intBo">
-                    <ul></ul>
-                </div>
-            </div>
-            <div class="movInt">
-                <div class="intHe">
-                    <span>发现好电影</span>
-                    <a href="#" style="color:#42bd56">更多</a>
-                </div>
-                <div class="intBo">
-                    <ul></ul>
-                </div>
-            </div>
-             <div class="movM">
-
+            
+            <div class="movM">
+                <slidfoot></slidfoot>
             </div>
             <div class="movF">
                 <div>
@@ -148,11 +118,30 @@
 </template>
 <script>
 import headone from '../components/headone';
-import sliderfu from '../components/slider/sliderfu'
+import sliderzong from '../components/slider/sliderzong';
+import slidfoot from '../components/slider/slidfoot';
 export default {
     components:{
         headone,
-        sliderfu 
+        sliderzong,
+        slidfoot
+    },
+    data(){
+        return{
+            arr:[]
+        };
+    },
+    created() {
+        this.axios({
+            methods: "get",
+            url:"/movie"
+        }).then((data)=>{
+                        console.log(data.data.movie);
+                        this.arr=data.data.movie;
+                    })
+    },
+    computed:{
+        
     }
 }
 </script>
@@ -163,35 +152,8 @@ export default {
         overflow: hidden;
         box-sizing: border-box;
         padding: 0 5%;
+        margin-top: .58rem;        
         /* background: rgb(63, 205, 106); */
-    }
-    .movInt{
-        padding-top: .1rem;
-    }
-    .intHe{
-        height: .26rem;
-        line-height: .26rerm;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding:0 .1rem;
-        /* background: rgb(63, 205, 106); */
-
-    }
-    .intHe span{
-        font-size: .16rem;
-        font-weight: 100;
-        float: left;
-    }
-    .intHe a{
-        font-size: .16rem;
-        font-weight: 100;
-        float: right;
-    }
-    .intBo ul{
-        padding:0.08rem 0;
-        background: palevioletred;
-
     }
     .movM{
         height: .5rem;

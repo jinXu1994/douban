@@ -44,23 +44,23 @@ export default {
                 this.bool=!this.bool
             },
             zhuce(){
-                var param=new URLSearchParams();
-                param.append("useremil",this.useremil);
-                param.append("userpass",this.userpass);
-                param.append("username",this.username);
-                this.axios({
-                    url:"http://localhost:3000/register",
-                    method:"post",
-                    data:param  
-                }).then((ok)=>{
-                    console.log(ok)
-                    if(ok.data.linkid==1){
-                        alert("注册成功");
+                // var param=new URLSearchParams();
+                // param.append("useremil",this.useremil);
+                // param.append("userpass",this.userpass);
+                // param.append("username",this.username);
+                // this.axios({
+                //     url:"http://localhost:3000/register",
+                //     method:"post",
+                //     data:param  
+                // }).then((ok)=>{
+                //     console.log(ok)
+                //     if(ok.data.linkid==1){
+                //         alert("注册成功");
                         this.$router.push("/login");
-                    }else{
-                        alert("注册失败请稍后再试");
-                    }
-                })               
+                //     }else{
+                //         alert("注册失败请稍后再试");
+                //     }
+                // })               
             }
         }
 }
