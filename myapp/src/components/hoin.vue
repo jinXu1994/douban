@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div @click="Detail()">
         <div class="wite"  style="text-align: center;" v-if="arr.length<=0">
             <img  src="../../static/img/loading_green.gif" >
         </div>
@@ -49,10 +49,30 @@ export default {
                         url:'/hoin'
                     }).then((data)=>{
                         console.log(data.data.shouye);
+                        console.log(data.data.shouye.id);
+
                         this.arr=data.data.shouye;
                     })
-        },3000)
-         
+        },3000)        
+    },
+    filters:{
+        titFilter(val){
+            return val.substring(0,20)
+        },
+        conFilter(val){
+            return val.substring(0,30)
+        }
+    },
+    props:{
+        data:{
+            type:Object
+        }
+    },
+    methods: {
+        Detail(){
+            this.$router.push({name:"Detail",params:{id:this.data.id}})
+            console.log(this.arr.id)
+        }
     }
 }
 </script>
@@ -105,12 +125,7 @@ export default {
         color:#aaaaaa;
     }
     
-    /* .homeR{
-        
-       width: .7rem;       
-       float:right;
-       background: brown;
-   } */
+
      img{
         display: block;
         float:right;

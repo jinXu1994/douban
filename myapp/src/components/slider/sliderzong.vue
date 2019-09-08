@@ -9,7 +9,6 @@
                     <div class="con">
                         <div class="msfu">
                             <sliderzi v-for="(v,i) in movieType" :key="i" :zititle="v.title" :imgurla="v.images.medium"></sliderzi>
-                         
                         </div>
                     </div>
                 
@@ -23,7 +22,7 @@ export default {
     components:{
         sliderzi 
     },
-     props:{
+    props:{
         txtM:{
             type:String,
             required:true
@@ -38,17 +37,17 @@ export default {
             var newMovie=[]
             switch(this.txtM){
                 case"影院热映":newMovie=this.sfuprops.filter((v,i)=>{
-                    if(i<9){
+                    if(i<8){
                         return v
                     }
                 });break
                 case"免费在线观影":newMovie=this.sfuprops.filter((v,i)=>{
-                    if(i>=9&&i<17){
+                    if(i>7&&i<16){
                         return v
                     }
                 });break
                 case"新片速递":newMovie=this.sfuprops.filter((v,i)=>{
-                    if(i>=17&&i<25){
+                    if(i>15&&i<24){
                         return v
                     }
                 });break                    

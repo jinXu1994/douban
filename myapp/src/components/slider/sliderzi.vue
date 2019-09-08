@@ -5,48 +5,12 @@
                 <img class="imgI" :src="imgurla"> 
             </div>
                   
-            <span class="dS">{{zititle}}</span>
+            <span class="dS">{{zit}}</span>
             <div class="zidiv">            
                 <span class="ziP">暂无影评</span>
             </div>
             
         </div>
-        <!-- <div class="slizi">
-            <div class="imgD">
-                <img class="imgI" src="../../../static/img/01.jpg">   
-            </div>              
-            <span class="dS">狮子王</span>
-            <div class="zidiv">
-                <span class="ziP">暂无影评</span>
-            </div>
-        </div>
-        <div class="slizi">
-            <div class="imgD">
-                <img class="imgI" src="../../../static/img/01.jpg">   
-            </div>              
-            <span class="dS">狮子王</span>
-            <div class="zidiv">
-                <span class="ziP">暂无影评</span>
-            </div>
-        </div>
-        <div class="slizi">
-            <div class="imgD">
-                <img class="imgI" src="../../../static/img/01.jpg">   
-            </div>              
-            <span class="dS">狮子王</span>
-            <div class="zidiv">
-                <span class="ziP">暂无影评</span>
-            </div>
-        </div>
-        <div class="slizi">
-            <div class="imgD">
-                <img class="imgI" src="../../../static/img/01.jpg">   
-            </div>              
-            <span class="dS">狮子王</span>
-            <div class="zidiv">
-                <span class="ziP">暂无影评</span>
-            </div>
-        </div> -->
     </div>
     
 </template>
@@ -60,6 +24,16 @@ export default {
         imgurla:{
             style:String,
             required:true
+        }
+    },
+    computed: {
+        zit(){
+            if(this.zititle.length>6){
+                return this.zititle.substring(0,6)+"..."
+
+            }else{
+                return this.zititle
+            }
         }
     }
 }

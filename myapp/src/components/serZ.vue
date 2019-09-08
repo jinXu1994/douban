@@ -7,18 +7,6 @@
             </h1>
             <span>{{v.text}}</span>
         </div>      
-        <!-- <div class="searZu-con">
-            <h1>
-                <a href="#" style="color:pink">电影</a>
-            </h1>
-            <span>影院热映</span>
-        </div>        
-        <div class="searZu-con">
-            <h1>
-                <a href="#" style="color:pink">电影</a>
-            </h1>
-            <span>影院热映</span>
-        </div>           -->
     </div>
 
 </template>
